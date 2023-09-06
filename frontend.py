@@ -15,6 +15,6 @@ button = st.button("Solve")
 if question and button:
     response = solve(question, st.container())
 
-# Display answer
-st.divider()
-st.markdown(response)
+    # Display answer
+    st.divider()
+    st.markdown(response)
