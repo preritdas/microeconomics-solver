@@ -1,6 +1,7 @@
-langchain
-streamlit
+langchain==0.0.281
+streamlit==1.26.0
+openai==0.28.0
 wolframalpha==5.0.0
-requests
-beautifulsoup4
-faiss-cpu
+requests==2.31.0
+beautifulsoup4==4.12.2
+faiss-cpu==1.7.4
