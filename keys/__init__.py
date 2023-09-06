@@ -21,7 +21,7 @@ if not os.path.exists(keys_path) and not st.secrets:
 if not os.path.exists(keys_path) and st.secrets:
     KEYS = models.Keys(
         OpenAI=models.OpenAIModel(api_key=st.secrets["OPENAI_API_KEY"]),
-        WolframAlpha=models.WolframAlphaModel(st.secrets["WOLFRAM_APP_ID"])
+        WolframAlpha=models.WolframAlphaModel(app_id=st.secrets["WOLFRAM_APP_ID"])
     )
 
 if os.path.exists(keys_path):
