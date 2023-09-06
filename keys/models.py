@@ -12,7 +12,13 @@ class WolframAlphaModel(BaseModel):
     app_id: str
 
 
+class GoogleSerperModel(BaseModel):
+    """Key for Google Serper."""
+    api_key: str
+
+
 class Keys(BaseModel):
     """Keys for various APIs."""
     OpenAI: OpenAIModel
     WolframAlpha: WolframAlphaModel
+    GoogleSerper: GoogleSerperModel
