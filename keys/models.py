@@ -9,4 +9,4 @@ class OpenAIModel(BaseModel):
 
 class Keys(BaseModel):
     """Keys for various APIs."""
-    openai: OpenAIModel
+    OpenAI: OpenAIModel
