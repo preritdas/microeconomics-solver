@@ -1,6 +1,5 @@
 """Interface."""
 import streamlit as st
-from langchain.callbacks import StreamlitCallbackHandler
 
 from solver import solve
 
