@@ -15,3 +15,4 @@ class WolframAlphaModel(BaseModel):
 class Keys(BaseModel):
     """Keys for various APIs."""
     OpenAI: OpenAIModel
+    WolframAlpha: WolframAlphaModel
