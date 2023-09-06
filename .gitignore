@@ -1,0 +1,21 @@
+venv/
+win_venv/
+wsl_venv/
+test.ipynb
+
+# Private IDE config files
+.vscode/
+
+# Private key files
+keys.yaml
+
+__pycache__/
+
+# Firebase
+firebase-debug.log
+
+# Coverage
+.coverage
+
+# Misc
+.DS_Store
