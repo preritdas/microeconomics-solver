@@ -27,6 +27,6 @@ executor = AgentExecutor(
 def solve(question: str, container = None) -> str:
     """Solve the question."""
     if container:
-        return executor.run(question, callbacks=StreamlitCallbackHandler(container))
+        return executor.run(question, callbacks=[StreamlitCallbackHandler(container)])
 
     return executor.run(question)
