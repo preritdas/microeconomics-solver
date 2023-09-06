@@ -1,4 +1,5 @@
 langchain
+streamlit
 wolframalpha==5.0.0
 requests
 beautifulsoup4
