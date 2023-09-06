@@ -3,20 +3,24 @@ from langchain.chat_models import ChatOpenAI
 from langchain.agents import ZeroShotAgent
 from langchain.agents import AgentExecutor
 
+from solver.prompts import PREFIX, FORMAT_INSTRUCTIONS
+from solver.tools import TOOLKIT
 from keys import KEYS
 
 
 llm = ChatOpenAI(openai_api_key=KEYS.OpenAI.api_key)
 agent = ZeroShotAgent.from_llm_and_tools(
+    prefix=PREFIX,
+    format_instructions=FORMAT_INSTRUCTIONS,
     llm=llm,
-    tools=None
+    tools=TOOLKIT
 )
 executor = AgentExecutor(
     agent=agent,
-    tools=None, # YO
-    max_iterations=5,
+    tools=TOOLKIT,
+    max_iterations=10,
     verbose=True,
-    callbacks=None # YO
+    callbacks=None  # TODO
 )
 
 
