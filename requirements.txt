@@ -1,0 +1,5 @@
+langchain
+wolframalpha==5.0.0
+requests
+beautifulsoup4
+faiss-cpu
