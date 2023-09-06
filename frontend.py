@@ -8,7 +8,7 @@ st.title("AlphaDenti")
 st.subheader("An AI-powered problem solver for Micro with Calc.")
 
 
-question = st.text_input("Problem here...")
+question = st.text_input("Problem here...", value="Who are you?")
 button = st.button("Solve")
 
 if question and button:
