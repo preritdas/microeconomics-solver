@@ -1,6 +1,8 @@
 """
-Read keys.yaml.
+Read keys.yaml. Prioritizes keys.yaml if it exists, otherwise checks for Streamlit secrets.
 """
+import streamlit as st
+
 import os
 import yaml
 
@@ -13,12 +15,19 @@ keys_path = os.path.join(
     "keys.yaml"
 )
 
-if not os.path.exists(keys_path):
+if not os.path.exists(keys_path) and not st.secrets:
     raise FileNotFoundError("keys.yaml file not found.")
 
-with open(keys_path, "r", encoding="utf-8") as f:
-    RAW_KEYS = yaml.safe_load(f)
+if not os.path.exists(keys_path) and st.secrets:
+    KEYS = models.Keys(
+        OpenAI=models.OpenAIModel(api_key=st.secrets["OPENAI_API_KEY"]),
+        WolframAlpha=models.WolframAlphaModel(st.secrets["WOLFRAM_APP_ID"])
+    )
+
+if os.path.exists(keys_path):
+    with open(keys_path, "r", encoding="utf-8") as f:
+        RAW_KEYS = yaml.safe_load(f)
 
 
-# Validate the keys and expose KEYS
-KEYS = models.Keys(**RAW_KEYS)
+    # Validate the keys and expose KEYS
+    KEYS = models.Keys(**RAW_KEYS)
