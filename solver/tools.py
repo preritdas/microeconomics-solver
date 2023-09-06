@@ -23,6 +23,15 @@ TOOLKIT = [
         )
     ),
     Tool(
+        name="Query Textbook",
+        func=lambda query: "Unfortunately this tool is not yet available.",
+        description=(
+            "Useful for when you want to get some clarification or microeconomics-specific "
+            "questions answered if it is necessary to understand how to solve the given "
+            "problem. Input should be a question posed directly to the textbook."
+        )
+    ),
+    Tool(
         name="Google Search",
         func=GoogleSerperAPIWrapperURL(serper_api_key=KEYS.GoogleSerper.api_key).run,
         description=(
