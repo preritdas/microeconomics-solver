@@ -7,6 +7,11 @@ class OpenAIModel(BaseModel):
     api_key: str
 
 
+class WolframAlphaModel(BaseModel):
+    """API key for WolframAlpha."""
+    app_id: str
+
+
 class Keys(BaseModel):
     """Keys for various APIs."""
     OpenAI: OpenAIModel
