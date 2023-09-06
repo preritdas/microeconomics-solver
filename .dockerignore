@@ -1,0 +1,8 @@
+# Remove everything not needed for deployment
+
+.devcontainer
+.github
+docs
+tests
+.gitignore
+README.md
