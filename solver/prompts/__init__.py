@@ -49,7 +49,7 @@ Action: Wolfram Alpha
 Action Input: solve 2(Q + 2) = 30 - 2Q for Q
 Observation: Assumption: solve 2 (Q + 2) = 30 - 2 Q for Q  Answer: Q = 13/2
 Thought: I now know the Final Answer 
-The profit-maximizing quantity Q* is 13/2.
+Final Answer: The profit-maximizing quantity Q* is 13/2.
 === End Example ===
 
 Note that I will only receive your "Final Answer" so if there's any information in an "Observation" that is pertinent to your "Final Answer" you must include it in the "Final Answer". 
