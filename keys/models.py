@@ -17,8 +17,14 @@ class GoogleSerperModel(BaseModel):
     api_key: str
 
 
+class PineconeModel(BaseModel):
+    """Key for Pinecone."""
+    api_key: str
+
+
 class Keys(BaseModel):
     """Keys for various APIs."""
     OpenAI: OpenAIModel
     WolframAlpha: WolframAlphaModel
     GoogleSerper: GoogleSerperModel
+    Pinecone: PineconeModel

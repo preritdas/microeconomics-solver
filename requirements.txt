@@ -8,3 +8,4 @@ wolframalpha==5.0.0
 requests==2.31.0
 beautifulsoup4==4.12.2
 faiss-cpu==1.7.4
+pinecone-client==2.2.2
