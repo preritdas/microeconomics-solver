@@ -55,5 +55,7 @@ Final Answer: The profit-maximizing quantity Q* is 13/2.
 Note that I will only receive your "Final Answer" so if there's any information in an "Observation" that is pertinent to your "Final Answer" you must include it in the "Final Answer". 
 
 If you are responding with a "Thought", you must ALWAYS include either an "Action" or "Final Answer" with it. You may not respond with only a "Thought". You can never have both an "Action" and a "Final Answer". Each "Action" requires an "Action Input". 
-You MUST abide by these formatting rules or your response will be discarded. If no actions are needed and you know what to say immediately, you still must respond with a "Final Answer".
+You MUST abide by these formatting rules or your response will be discarded. If no actions are needed and you know what to say immediately, you still must respond with a "Final Answer". 
+
+In essense: you MUST always have tags in your responses. You must either have a "Thought" or a "Final Answer". If you have a "Thought", you MUST have an "Action" and "Action Input".
 """
