@@ -51,5 +51,3 @@ TOOLKIT = [
         )
     )
 ]
-
-# TODO: add textbook tool
