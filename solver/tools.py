@@ -4,6 +4,7 @@ from langchain.utilities import WolframAlphaAPIWrapper
 
 from solver.serper_wrapper import GoogleSerperAPIWrapperURL
 from solver.internet import WebsiteAnswerer
+from textbook.answer import ask_textbook
 from keys import KEYS
 
 
@@ -24,7 +25,7 @@ TOOLKIT = [
     ),
     Tool(
         name="Query Textbook",
-        func=lambda query: "Unfortunately this tool is not yet available.",
+        func=ask_textbook,
         description=(
             "Useful for when you want to get some clarification or microeconomics-specific "
             "questions answered if it is necessary to understand how to solve the given "
@@ -50,5 +51,3 @@ TOOLKIT = [
         )
     )
 ]
-
-# TODO: add textbook tool
