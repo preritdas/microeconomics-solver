@@ -18,7 +18,7 @@ if not Path("interpreter_files").exists():
     Path("interpreter_files").mkdir()
 
 
-def _flush_interpreter_files():
+def flush_interpreter_files():
     """Flush the interpreter_files directory."""
     for file in Path("interpreter_files").iterdir():
         file.unlink()
@@ -26,9 +26,6 @@ def _flush_interpreter_files():
 
 def run(query: str) -> str:
     """Run the query."""
-    # Clear any old files
-    _flush_interpreter_files()
-
     with CodeInterpreterSession() as session:
         response = session.generate_response(query)
 

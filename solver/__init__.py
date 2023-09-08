@@ -6,6 +6,7 @@ from langchain.callbacks import StreamlitCallbackHandler
 
 from solver.prompts import PREFIX, FORMAT_INSTRUCTIONS
 from solver.tools import TOOLKIT
+from solver.interpreter import flush_interpreter_files
 from keys import KEYS
 
 
@@ -26,6 +27,9 @@ executor = AgentExecutor(
 
 def solve(question: str, container = None) -> str:
     """Solve the question."""
+    # Clear out old interpreter files
+    flush_interpreter_files()
+
     if container:
         return executor.run(question, callbacks=[StreamlitCallbackHandler(container)])
 
