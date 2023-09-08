@@ -1,10 +1,10 @@
 """Read and vectorize the textbook for this course."""
-import PyPDF2
-
 from pathlib import Path
 
 
 def pdf_to_text(pdf_path, output_txt_path):
+    import PyPDF2
+    
     # Open the PDF file in binary read mode
     with open(pdf_path, 'rb') as file:
         # Create a PDF reader object
