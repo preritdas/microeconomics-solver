@@ -17,8 +17,14 @@ class GoogleSerperModel(BaseModel):
     api_key: str
 
 
+class CodeBoxModel(BaseModel):
+    """Key for CodeBox API."""
+    api_key: str
+
+
 class Keys(BaseModel):
     """Keys for various APIs."""
     OpenAI: OpenAIModel
     WolframAlpha: WolframAlphaModel
     GoogleSerper: GoogleSerperModel
+    CodeBox: CodeBoxModel
