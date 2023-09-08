@@ -9,7 +9,7 @@ from solver.tools import TOOLKIT
 from keys import KEYS
 
 
-llm = ChatOpenAI(openai_api_key=KEYS.OpenAI.api_key)
+llm = ChatOpenAI(model="gpt-4", openai_api_key=KEYS.OpenAI.api_key)
 agent = ZeroShotAgent.from_llm_and_tools(
     prefix=PREFIX,
     format_instructions=FORMAT_INSTRUCTIONS,
