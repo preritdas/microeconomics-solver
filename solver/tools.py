@@ -4,6 +4,7 @@ from langchain.utilities import WolframAlphaAPIWrapper
 
 from solver.serper_wrapper import GoogleSerperAPIWrapperURL
 from solver.internet import WebsiteAnswerer
+from solver.interpreter import run
 from textbook.answer import ask_textbook
 from keys import KEYS
 
@@ -30,6 +31,20 @@ TOOLKIT = [
             "Useful for when you want to get some clarification or microeconomics-specific "
             "questions answered if it is necessary to understand how to solve the given "
             "problem. Input should be a question posed directly to the textbook."
+        )
+    ),
+    Tool(
+        name="Plot a Chart",
+        func=run,
+        description=(
+            "Useful for when you need to plot a chart. Input should be natural language, "
+            "like you're instructing someone about what to plot. For example, you could say, "
+            "plot a quantity demanded and quantity supplied chart with a price floor of $5 "
+            "and a price ceiling of $10. You will not see the resulting image, just the "
+            "natural language response from the plotter. Feel free to provide actual "
+            "equations and data if you'd like. You can also use this to plot intuitive "
+            "charts where the numerical data is irrelevant. Remember that you can couple "
+            "this tool with Wolfram Alpha to get numerical data for your chart if needed."
         )
     ),
     Tool(

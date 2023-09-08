@@ -1,6 +1,7 @@
 """Interface."""
 import streamlit as st
 
+from pathlib import Path
 from solver import solve
 
 
@@ -17,3 +18,7 @@ if question and button:
     # Display answer
     st.divider()
     st.markdown(response)
+
+    # Check for interpreter files
+    for file in Path("interpreter_files").iterdir():
+        st.image(str(file.absolute()))
