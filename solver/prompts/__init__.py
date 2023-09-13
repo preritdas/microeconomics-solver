@@ -59,3 +59,10 @@ You MUST abide by these formatting rules or your response will be discarded. If 
 
 In essense: you MUST always have tags in your responses. You must either have a "Thought" or a "Final Answer". If you have a "Thought", you MUST have an "Action" and "Action Input".
 """
+
+SUFFIX = """Take a deep breath, think clearly and logically, and show your work.
+
+Begin!
+
+Input: {input}
+Thought:{agent_scratchpad}"""
