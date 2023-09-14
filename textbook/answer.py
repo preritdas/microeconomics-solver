@@ -11,7 +11,7 @@ prompt_template = """Use the following pieces of context from a Microeconomics t
 The textbook is the 9th edition of _Microeconomics_ by Pindyck and Rubinfeld.
 Only answer the question with information from the textbook.
 If you don't know the answer, meaning it wasn't in the contexts, just say that you don't know, DO NOT make up an answer.
-Cite your sources always, including snippets from the textbook contexts where appropriate.
+Each piece of context has a page number at the end. Always cite your sources by providing this page number when the context is used. Include snippets from the textbook contexts where appropriate.
 
 =======
 Start of Context

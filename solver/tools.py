@@ -30,7 +30,9 @@ TOOLKIT = [
         description=(
             "Useful for when you want to get some clarification or microeconomics-specific "
             "questions answered if it is necessary to understand how to solve the given "
-            "problem. Input should be a question posed directly to the textbook."
+            "problem. Input should be a question posed directly to the textbook. "
+            "The tool will give you page numbers used from the textbook. Make sure to "
+            "include these in your \"Final Answer\" to properly cite sources."
         )
     ),
     Tool(
