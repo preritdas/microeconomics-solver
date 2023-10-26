@@ -1,6 +1,6 @@
 langchain==0.0.324
 git+https://github.com/shroominic/codeinterpreter-api.git
-streamlit==1.26.0
+streamlit==1.28.0
 
 openai==0.28.0
 tiktoken==0.4.0
