@@ -1,4 +1,4 @@
-langchain==0.0.329
+langchain==0.0.330
 git+https://github.com/shroominic/codeinterpreter-api.git
 streamlit==1.28.0
 
